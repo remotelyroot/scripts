@@ -26,12 +26,7 @@ __________                       __         .__          __________             
        \/          \/      \/                 \/          \/          \/     \/     \/     \/       
 "@ -ForegroundColor Green
 
-
-
-
-$LogFile = "$env:USERPROFILE\Desktop\cleanup_log_$(Get-Date -Format 'yyyy-MM-dd_hh-mm-ss').txt"
 $TempPaths = @("$env:TEMP", "$env:LOCALAPPDATA\Temp")
-$index=0
 
 
 # Function to clean-up Temporary Files on the Windows Desktop Machine
@@ -79,7 +74,6 @@ for ($i = 0; $i -lt $tasks.Count; $i++) {
     & $task.Name
 
 }
-
 
 Write-Progress -Activity "System Cleanup" -Completed
 Write-Host "`n✅ All cleanup tasks completed!" -ForegroundColor Green
