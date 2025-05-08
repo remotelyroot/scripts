@@ -28,7 +28,6 @@ __________                       __         .__          __________             
 
 $TempPaths = @("$env:TEMP", "$env:LOCALAPPDATA\Temp")
 
-
 # Function to clean-up Temporary Files on the Windows Desktop Machine
 function Clear-TempFiles {
     foreach ($temp_files in $TempPaths){
@@ -55,8 +54,6 @@ function Start-SFC {
     Start-Process -FilePath "sfc.exe" -ArgumentList "/scannow" -Wait -NoNewWindow
 
 }
-
-
 
 $tasks = @(
     @{Name="Clear-TempFiles"; Label = "Cleaning Temp Files..."}
